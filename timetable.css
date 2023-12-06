@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h2, p {
+    text-align: left;
+}
+#toSchoolRemainingTime,#toStationRemainingTime{
+	font-weight : bolder; 
+	color: deepskyblue;
+	font-size:1.4em;
+}
+
+#toStationCurrentTargetTime,#toSchoolCurrentTargetTime{
+	font-weight : bolder;
+	color: #8C8CF5;
+	font-size:1.1em;
+}
