@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>학점 계산기</title>
+<link rel="stylesheet" href="GPA.css"
+</head>
+<body>
+
+<hr>
+<div class="page-hdr"> 학점 계산기 </div>
+<div class="page-body">
+	<div class="section pad-24 mtop-30">
+		<table>
+			<tr>
+				<th>이수구분</th>
+				<th>수강과목</th>
+				<th>학점</th>
+				<th>성적</th>
+			</tr>
+			<tr>
+				<td><form>
+					<div>
+						<label for="major">전공</label>
+						<input type="checkbox" id="major" value="major" />
+					</div>
+				</form></td>
+				<td><input name="subject1" type="text" placeholder="수강과목" required></td>
+				<td><input name="credit" type="text"></td>
+				<td><form action="#">
+					<select name="grade" id="grade">
+						<option value="A+">A+</option>
+						<option value="A">A</option>
+						<option value="B+">B+</option>
+						<option value="B">B</option>
+						<option value="C+">C+</option>
+						<option value="C">C</option>
+						<option value="D+">D+</option>
+						<option value="D">D</option>
+						<option value="P">P</option>
+						<option value="F">F</option>
+					</select>
+  				</form></td>
+			</tr>
+		</table>
+
+		<input type="submit" class="mtop-20" value="계산하기">
+	</div>
+</div>
+</body>
+</html>
