@@ -28,9 +28,7 @@ html{
    border: 1px solid #000;
    border-radius: 1px;
    font-size: 1.4rem;
-   text-decoration: none;
 }
-
 .bt_wrap a:first-child{
    margin-left: 0;
 }
@@ -39,6 +37,26 @@ html{
    color: #000;
 }
 
+.bt_all {
+	margin-top: 10px;
+   text-align: center;
+   font-size: 0;
+   text-align: right;
+}
+.bt_all a{
+  display: inline-block;
+   min-width: 45px;
+   margin-left: 1px;
+   padding: 5px;
+   border: 1px solid #000;
+   border-radius: 1px;
+   font-size: 1.1rem;
+   text-decoration: none;
+}
+
+
+
+
 .board_list{
 	width: 100%;
 	border-top: 1px solid #000;
@@ -46,7 +64,6 @@ html{
 .board_list > div{
 	border-bottom: 1px solid #ddd;
 	font-size: 0;
-	padding: 10px 0;
 }
 .board_list > div.top{
 	border-bottom: 1px solid #999;
@@ -65,7 +82,7 @@ html{
 }
 
 .board_list .num{
-	width: 10%s;
+	width: 10%;
 }
 .board_list .title{
 	width: 60%;
@@ -73,8 +90,8 @@ html{
 }
 
 .board_list .title a {
-    text-decoration: none; 
-}
+    text-decoration: none;
+  }
   
 .board_list .top .title{
 	text-align: center;
@@ -101,7 +118,7 @@ html{
 	box-sizing: border-box;
 	vertical-align: middle;
 	border: 1px solid #ddd;
-	border-left: 10px;
+	border-left: 10;
 	line-height: 100%;
 }
 .board_page a.bt{
