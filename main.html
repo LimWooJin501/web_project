@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>학교생활 도우미</title>
+	<link rel="stylesheet" href="main.css"
+</head>
+<body>
+<div id="topRectangle">
+	<strong>학교생활 도우미</strong>
+	</div>
+
+<div id="middleSquares">
+	<div class="square" onclick="navigate('timetable.html')">셔틀</div>
+	<div class="square" onclick="navigate('info.html')">학교정보</div>
+	<div class="square" onclick="navigate('mindtest.html')">심리상담</div>
+    <div class="square" onclick="navigate('gpa.html')">학점계산기</div>
+    </div>
+
+<div id="bottomRectangles">
+    <div class="rectangle" onclick="navigate('board.html')">이벤트</div>
+    <div class="rectangle" onclick="navigate('mainboard.html')">공지사항</div>
+    </div>
+
+<script>
+	function navigate(page) {
+		// 여기에서 실제 페이지 이동 또는 다른 동작을 수행
+		window.location.href = page;
+		}
+		</script>
+</body>
+</html>
