@@ -3,49 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <title>학점 계산기</title>
-<link rel="stylesheet" href="GPA.css"
+<link rel="stylesheet" href="gpa.css">
 </head>
 <body>
 
 <hr>
-<div class="page-hdr"> 학점 계산기 </div>
-<div class="page-body">
-	<div class="section pad-24 mtop-30">
-		<table>
-			<tr>
-				<th>이수구분</th>
-				<th>수강과목</th>
-				<th>학점</th>
-				<th>성적</th>
-			</tr>
-			<tr>
-				<td><form>
-					<div>
-						<label for="major">전공</label>
-						<input type="checkbox" id="major" value="major" />
-					</div>
-				</form></td>
-				<td><input name="subject1" type="text" placeholder="수강과목" required></td>
-				<td><input name="credit" type="text"></td>
-				<td><form action="#">
-					<select name="grade" id="grade">
-						<option value="A+">A+</option>
-						<option value="A">A</option>
-						<option value="B+">B+</option>
-						<option value="B">B</option>
-						<option value="C+">C+</option>
-						<option value="C">C</option>
-						<option value="D+">D+</option>
-						<option value="D">D</option>
-						<option value="P">P</option>
-						<option value="F">F</option>
-					</select>
-  				</form></td>
-			</tr>
-		</table>
-
-		<input type="submit" class="mtop-20" value="계산하기">
+<div class="page-hdr"> 학점 계산기 </div> <br>
+<div>
+	<div>
+		<form action="gpaCalc.jsp" method="post">
+			<table id="gpaTable">
+				<thead>
+					<tr>
+						<th>수강과목</th>
+						<th>이수구분</th>
+						<th>학점</th>
+						<th>성적</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input type="text" name="subject1" placeholder="수강과목" required>
+						</td>
+						<td>
+							전공<input type="checkbox" name="major1" value="major">
+						</td>
+						<td>
+							<input type="number" name="credit1" placeholder="0" min="0">
+						</td>
+						<td>
+							<select name="grade1">
+								<option value="A+">A+</option>
+								<option value="A">A</option>
+								<option value="B+">B+</option>
+								<option value="B">B</option>
+								<option value="C+">C+</option>
+								<option value="C">C</option>
+								<option value="D+">D+</option>
+								<option value="D">D</option>
+								<option value="P">P</option>
+								<option value="F">F</option>
+							</select>
+  						</td>
+					</tr>	
+				</tbody>
+			</table>
+			<input type="button" value="더 입력하기" onclick="addRow()">
+			<input type="reset" value="초기화">
+			<br>
+			<input type="submit" value="계산하기">
+		</form>
 	</div>
 </div>
+<script>
+	var i = 2;
+	function addRow() {
+  		var table = document.getElementById("gpaTable");
+    	var row = table.insertRow(i);
+    	var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		var subject = "subject" + i;
+		var major = "major" + i;
+		var credit = "credit" + i;
+		var grade = "grade" + i;
+		cell1.innerHTML = '<input type="text" name="'+subject+'" placeholder="수강과목" required>';
+        cell2.innerHTML = '<td>전공<input type="checkbox" name="'+major+'" value="major"></td>';
+        cell3.innerHTML = '<input type="number" name="'+credit+'" placeholder="0" min="0">';
+        cell4.innerHTML = '<select name="'+grade+'"><option value="A+">A+</option><option value="A">A</option><option value="B+">B+</option><option value="B">B</option><option value="C+">C+</option><option value="C">C</option><option value="D+">D+</option><option value="D">D</option><option value="P">P</option><option value="F">F</option></select>';
+		i = i + 1;
+	}
+</script>
 </body>
 </html>
