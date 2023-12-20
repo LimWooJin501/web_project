@@ -1,145 +1,78 @@
-@charset "UTF-8";
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="mainboard.css">
+</head>
+<body>
 
-html{ /*html전체적인 폰트 크기*/
-	font-size: 10px; 
-}
+<div id="topRectangle">
+	<strong>공지사항</strong>
+	</div>
+	
 
-#topRectangle {
-	background-color: #930000;
-	height: 150px;
-	width: 100%;
-	border-radius: 0 0 20px 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	font-size: 36px;
-	margin-bottom: 50px; /* 간격 조절 */
-}
-#topRectangle strong {
-	font-weight: bold; /* 텍스트 굵게 설정 */
-}
+<div class="bt_all">
+<a href="board.html" class="bt_all">전체보기</a>
+</div>
+<br>
 
+<div class="board_list_wrap">
+<div class="board_list">
+<div class="top">
+<div class="num">번호</div>
+<div class="title">제목</div>
+<div class="writer">글쓴이</div>
+<div class="date">작성일</div>
 
-.bt_wrap{ /*상단에 30간격, 내부글씨 가운데정렬, 공백제거, 가운데 정렬위한 추가 설정*/
-   margin-top: 30px;
-   text-align: center;
-   font-size: 0;
-   text-align:center;
-}
-.bt_wrap a{
-   display: inline-block; /*링크 인라인블록표시*/
-   min-width: 80px; /*최소너비 80*/
-   margin-left: 10px; /*왼쪽여백 10 버튼간조절*/
-   padding: 9px; /*안쪽여백 9 글씨와 버튼사이 간격*/
-   border: 1px solid #000; /*테두리 1두께 검정*/
-   border-radius: 1px; /*테두리 모서리 반지름*/
-   font-size: 1.4rem; /*버튼글씨 1.4*/
-}
-.bt_wrap a:first-child{
-   margin-left: 0; /*첫번째버튼은 왼쪽여백주지않음*/
-}
-.bt_wrap a.on{
-   background: #fff;/*배경흰색*/
-   color: #000;/*글씨 검정*/
-}
+</div>
 
-.bt_all {
-	margin-top: 10px;
-   text-align: center;
-   font-size: 0;
-   text-align: right;
-}
-.bt_all a{
-  display: inline-block;
-   min-width: 45px;
-   margin-left: 1px;
-   padding: 5px;
-   border: 1px solid #000;
-   border-radius: 1px;
-   font-size: 1.1rem;
-   text-decoration: none;
-}
+<div>
+<div class="num">*</div>
+<div class="title"><a href="#">Microsoft O365 저장공간 제한 안내</a></div>
+<div class="writer">정보인프라팀</div>
+<div class="date">2023.11.23</div>
 
+</div>
 
+<div>
+<div class="num">4</div>
+<div class="title"><a href="#">[고대빵] 2023 크리스마스케이크 출시 안내</a></div>
+<div class="writer">식품과학종합...</div>
+<div class="date">2023.12.19</div>
 
+</div>
 
-.board_list{
-	width: 100%;
-	border-top: 1px solid #000;
-}
-.board_list > div{
-	border-bottom: 1px solid #ddd;
-	font-size: 0;
-}
-.board_list > div.top{
-	border-bottom: 1px solid #999;
-}
-.board_list > div:last-child{
-	border-bottom: 1px solid #000;
-}
-.board_list > div > div{
-	display: inline-block;
-	padding: 15px 0;
-	text-align: center;
-	font-size: 1.4rem;
-}
-.board_list > div.top > div{
-	font-weight: 600;
-}
+<div>
+<div class="num">3</div>
+<div class="title"><a href="#">[고대빵] 연말연시 선물세트 안내</a></div>
+<div class="writer">식품과학종합...</div>
+<div class="date">2023.12.19</div>
 
-.board_list .num{
-	width: 10%;
-}
-.board_list .title{
-	width: 60%;
-	text-align: left;
-}
+</div>
 
-.board_list .title a {
-    text-decoration: none;
- }
-  
-.board_list .top .title{
-	text-align: center;
-}
-.board_list .writer{
-	width: 10%;
-}
-.board_list .date{
-	width: 20%;
-}
+<div>
+<div class="num">2</div>
+<div class="title"><a href="#">[고대빵] 박스케이터링 안내</a></div>
+<div class="writer">식품과학종합...</div>
+<div class="date">2023.12.19</div>
 
+</div>
 
-.board_page{
-	margin-top: 30px;
-	text-align: center;
-	font-size: 0;
-}
-.board_page a{
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	box-sizing: border-box;
-	vertical-align: middle;
-	border: 1px solid #ddd;
-	border-left: 10;
-	line-height: 100%;
-}
-.board_page a.bt{
-	padding-top: 10px;
-	font-size: 1.2rem;
-	letter-spacing: -1px;
-}
-.board_page a.num{
-	padding-top: 10px;
-	font-size: 1.5rem;
-}
-.board_page a.num.on{
-	border-color: #000;
-	background: #000;
-	color: #fff;
-}
-.board_page a:first-child{
-	border-left: 1px solid #ddd;
-}
+<div>
+<div class="num">1</div>
+<div class="title"><a href="#">[디지털정보처] 통합 행사 안내 서비스 '호라시움' 오픈</a></div>
+<div class="writer">디지털전략팀</div>
+<div class="date">2023.12.19</div>
+
+</div>
+
+</div>
+
+<div class="board_page">
+
+</div>
+</div>
+</div>
+</body>
+</html>
