@@ -1,18 +1,25 @@
 @charset "UTF-8";
 
-html{
+html{ /*html전체적인 폰트 크기*/
 	font-size: 10px; 
 }
-.board_wrap{
-	width: 1000px;
-	margin: 100px auto; 
+
+#topRectangle {
+	background-color: #930000;
+	height: 150px;
+	width: 100%;
+	border-radius: 0 0 20px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 36px;
+	margin-bottom: 50px; /* 간격 조절 */
 }
-.board_title {
-	margin-bottom: 30px;
+#topRectangle strong {
+	font-weight: bold; /* 텍스트 굵게 설정 */
 }
-.board_title strong{
-	font-size: 30px;
-}
+
 
 .bt_wrap{
    margin-top: 30px;
@@ -24,7 +31,7 @@ html{
    display: inline-block;
    min-width: 80px;
    margin-left: 10px;
-   padding: 9px;
+   padding: 9px; 
    border: 1px solid #000;
    border-radius: 1px;
    font-size: 1.4rem;
@@ -91,7 +98,7 @@ html{
 
 .board_list .title a {
     text-decoration: none;
-  }
+ }
   
 .board_list .top .title{
 	text-align: center;
@@ -102,6 +109,7 @@ html{
 .board_list .date{
 	width: 20%;
 }
+
 
 .board_page{
 	margin-top: 30px;
